@@ -1,3 +1,8 @@
-/**
- * Created by user on 6/28/2016.
- */
+myApp.controller('FormController', ['$scope', function($scope) {
+
+    $scope.toggleErrorShow = function(){
+        if($scope.myForm.input.$valid == true)
+            alert("SICA A SCRIS CEVA !!!!");
+    }
+
+}]);

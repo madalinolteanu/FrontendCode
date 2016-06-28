@@ -1,0 +1,11 @@
+<select ng-model="myColor" ng-options="color as color.text group by color.class for color in colors" ng-change="changeColor()">Select me Please</select>
+<span ng-class="selectedClass">Some text</span>
+<div>SCRIE AICI: <input name="input" ng-model="userType"></div>
+<div ng-repeat="color in colors| filter:userType">
+    {{color.text}}
+
+    <a class="btn btn-primary btn-lg" role="button" ng-click="toggleDeleteColor()">Sterge</a>
+</div>
+<div> ATENTIE !!! NU DATI STERGERE PENTRU CA STERGE TOT</div>
+<div> In caz de stergere, dati refresh la pagina</div>
+

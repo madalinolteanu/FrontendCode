@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<ng-form name="myForm" ng-controller="FormController" class="my-form">
+    userType: <input name="input" ng-model="userType" required>
+    <span class="error" ng-show="myForm.input.$error.required">Required!</span><br>
+    userType = {{userType}}<br>
+    myForm.input.$pristine ={{myForm.input.$pristine}}<br>
+    myForm.input.$dirty = {{myForm.input.$dirty}}<br>
+    myForm.input.$valid = {{myForm.input.$valid}}<br>
+    myForm.input.$invalid ={{myForm.input.$invalid}}<br>
+    myForm.input.$submitted ={{myForm.input.$submitted}}<br>
+    myForm.input.$error = {{myForm.input.$error}}<br>
+    myForm.$error.required = {{!!myForm.$error.required}}<br>
 
-</body>
-</html>
+    <a class="btn btn-primary btn-lg" role="button" ng-click="toggleErrorShow($index)">Sica</a>
+
+</ng-form>
+
